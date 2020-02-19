@@ -1,0 +1,62 @@
+p {
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    color: rgb(21, 97, 116);
+    text-align: justify;
+    width: 50em;
+    padding: 1.15em;
+    border: 0em;
+    margin-left: 0em;
+}
+
+div {
+    border: solid 1px;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 12em;
+}
+
+.text {
+    position: absolute;
+    top: 1em;
+    width: 20%;
+    height: auto;
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Picture {
+    width: 10em;
+    height: auto;
+    border-radius: 25px;
+    border: .2em solid rgb(4, 119, 139);
+
+    
+}
+
+.list li {
+    font-size: 1.45em;
+    color: rgb(63, 63, 190);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.align {
+    
+    padding: 1em;
+}
+
+.socialMedia p {
+    color: rgb(9, 83, 153);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* display: inline-block; */
+    object-position: center;
+}
+.socialMedia img {
+    width: 5em;
+    height: 5em;    
+}

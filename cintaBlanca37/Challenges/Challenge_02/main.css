@@ -1,0 +1,142 @@
+/* div {
+    border: solid 1px;
+} */
+
+ .nav {    
+    top: 0;
+    width: 100%;    
+}
+
+.navElements {
+    position: fixed;    
+    display: inline;    
+    margin-left: 82%;
+}
+
+.p-15 {
+    padding-left: 15px;      
+}
+
+.nav a {    
+    color: rgba(0,0,0,0.87);
+    font-family: arial,sans-serif;
+    font-size: small;    
+}
+.nav a:link {
+    color: black !important;
+    text-decoration: none;   
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
+
+.container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+    width: 400px;
+    height: 16em;
+}
+
+.inputSearch {
+    /* display: inline; */
+    padding:0 0 0 20px;
+    margin:0 20px;    
+}
+
+.inputSearch input {
+    /* position: relative; */
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    border-radius: 25px;
+    padding-bottom: 2em;
+    margin-bottom: .85em;    
+    
+}
+
+.inputSearch #left {        
+    position: absolute; 
+    right: 68%;
+    bottom: 50%;
+    width:32px;
+    height:32px;
+    border-radius: 1em;
+}
+
+.inputSearch #right {        
+    position: absolute; 
+    left: 69%;
+    bottom: 50%;
+    width:24px;
+    height:auto;
+}
+
+.buttonArea {
+    margin-right: 0 auto;
+    text-align: center;
+    padding-top: 18px;
+}
+
+.buttonArea button {    
+    margin-left: 12px;
+    margin-right: auto;
+    text-align: center;
+    height: 3em;
+    widows: 6em;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+.language {
+    margin-right: 0 auto;
+    text-align: center;
+    margin-top: 24px;
+    padding-bottom: 24px;
+}
+
+.language span {
+        
+    font-family: arial,sans-serif;
+    font-size: small;    
+    
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    color: rgb(107, 103, 103);
+    background: #f2f2f2;
+    padding-bottom: 10px;
+    padding-top: 6px;
+    border-top: 1px solid #e4e4e4;
+    font-size: 13px;    
+    font-family: arial,sans-serif;
+    
+}
+
+.footerContent {
+    border-top: 1px solid #e4e4e4;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    
+}
+
+.footer a {
+    color: rgb(107, 103, 103);
+}
+
+.footer a:link {
+    color: rgb(107, 103, 103);
+    text-decoration: none;   
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: rgb(107, 103, 103);
+}

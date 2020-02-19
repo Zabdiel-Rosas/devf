@@ -1,0 +1,46 @@
+/*selector global para comprobar*/
+/* * {
+    background-color: crimson;
+} */
+
+/* selector de etiqueta */
+h1{
+    font-size: 70px;
+    color:rgb(35, 35, 146);
+    text-align: center;
+}
+
+p{
+    font-size: 30px;
+    color: green;
+    text-align: justify;
+}
+
+/* selector de clase */
+.parrafoAzul{
+    font-size: 25px;
+    color: blue;
+    text-align: right;
+}
+
+.letrasPequeñas{
+    font-size: 15px;
+}
+
+.boldFont{
+    font-weight: bold;
+}
+
+/* Box Model */
+
+.margen {
+    margin: 20px;
+}
+
+.padding {
+    padding: 30px;
+}
+
+.borde {
+    border: 2px black solid;
+}

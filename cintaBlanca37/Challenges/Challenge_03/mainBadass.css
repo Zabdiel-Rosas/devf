@@ -1,0 +1,84 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* div {
+    border: solid 1px;
+} */
+
+.blue {
+    height: 100%;
+    background-color: rgb(18, 18, 105);
+    /* background-color: white; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+/* Propiedades del White */
+
+.whiteOneSize {
+    width: 32%;    
+}
+
+.whiteTwoSize {
+    width: 61%;
+    height: 43%;
+
+}
+
+.whiteColor {
+    background-color: cornsilk;
+}
+
+/* .whiteOne {
+    
+} */
+
+.whiteTwoFlex {    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.whiteThreeFlex {    
+    display: flex;
+    align-items: flex-end;
+}
+
+.whiteFourFlex {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+    /* Propiedades del Red */
+.redOneWidth {
+    width: 88%;    
+}
+
+.redTwoWidth {
+    width: 94%;
+}
+
+.redHeight {
+    height: 80%;
+}
+
+.redColor {
+    background-color: rgb(199, 17, 17);
+}
+
+/* .redOne {
+}
+
+.redTwo {
+}
+
+.redThree {
+}
+
+.redFour {     
+} */

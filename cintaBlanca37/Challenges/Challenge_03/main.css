@@ -1,0 +1,75 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* div {
+    border: solid 1px;
+} */
+
+.blue {
+    height: 100%;
+    background-color: rgb(18, 18, 105);
+    /* background-color: white; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.whiteOne {
+    width: 32%;
+    height: 43%;
+    background-color: cornsilk;
+    
+}
+
+.whiteTwo {
+    width: 61%;
+    height: 43%;
+    background-color: cornsilk;    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.whiteThree {
+    width: 32%;
+    height: 43%;
+    background-color:cornsilk;
+    display: flex;
+    align-items: flex-end;
+}
+
+.whiteFour {
+    width: 61%;
+    height: 43%;
+    background-color: cornsilk;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.redOne {
+    width: 88%;
+    height: 80%;
+    background-color: rgb(199, 17, 17);
+}
+
+.redTwo {
+    width: 94%;
+    height: 80%;
+    background-color: rgb(199, 17, 17);
+}
+
+.redThree {
+    width: 88%;
+    height: 80%;
+    background-color: rgb(199, 17, 17);
+}
+
+.redFour {
+    width: 94%;
+    height: 80%;
+    background-color: rgb(199, 17, 17);     
+}
