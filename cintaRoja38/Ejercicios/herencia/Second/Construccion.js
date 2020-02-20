@@ -18,4 +18,10 @@ class Construccion{
     getDireccion(){
         return this.direccion;
     }
+
+    setDireccion(newValue){
+        this.direccion = newValue;
+    }
 }
+
+module.exports = Construccion;
