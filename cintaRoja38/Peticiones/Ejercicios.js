@@ -22,20 +22,50 @@ function getPokemonByName(pokemonName){
 
 //Ejercicio 2 para la casa
 function getFirstGeneration(){
-    const url = `https://pokeapi.co/api/v2/pokemon/`;
+    // json.moves[indice].move.name
     let pokemons = [];
 
-    for(let i = 0; i <= 150; i++){
-        
-    }
+    for(let i = 1; i < 151; i++){
+        let URL = `https://pokeapi.co/api/v2/pokemon/${i}/`;
+        request.get(URL, (err, response, body) => {
+            console.log(err);
+            console.log(response.statusCode);
+            
+            const json = JSON.parse(body);
+            let movesPosition = Object.keys(json.moves);
+            let typesPosition = Object.keys(json.types);
 
-    request.get(url, (err, response, body) => {
-        console.log(err);
-        console.log(response.statusCode);
-        const json = JSON.parse(body);
-        console.log(json);
-    });
+            function getMoves(positions){
+                let allMoves = [];
+                    for(let i = 0; i < positions.length; i++){
+                        allMoves.push( json.moves[positions[i]].move.name);
+                    }
+                    return allMoves;
+            }
+
+            function getTypes(positions){
+                let allTypes = [];
+                for(let i = 0; i < positions.length; i++){
+                    allTypes.push(json.types[positions[i]].type.name);
+                }
+                return allTypes;
+            }
+
+            const object = {
+                name: json.name,
+                moves: getMoves(movesPosition),
+                type: getTypes(typesPosition),
+                height: json.height,
+                weight: json.weight
+            };
+
+            console.log(object);
+            
+        });
+    }    
 }
+
+getFirstGeneration();
 
 //Ejercicio 3
 
