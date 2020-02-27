@@ -65,7 +65,7 @@ function getFirstGeneration(){
     }    
 }
 
-getFirstGeneration();
+// getFirstGeneration();
 
 //Ejercicio 3
 
@@ -127,3 +127,22 @@ function getGenreByBandName(bandName){
 }
 
 // getGenreByBandName('The Strokes');
+
+//Ejercicio 6 NASA
+
+const getNEO = (startDate, endDate, appKey) => {
+    const URL = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${appKey}`;
+
+    request.get(URL, (err, response, body) => {
+        console.log(err);
+        console.log(response.statusCode);
+        const json = JSON.parse(body);
+        let neo = json.near_earth_objects;
+        const elementsPosition = Object.keys(neo);
+        
+       console.log(neo);
+        
+    });
+}
+
+getNEO('2020-02-19', '2020-02-26', 'ykgPMfvMIs9i05tXnmtnPiZtyfW19ctjAx1ccIPt');
