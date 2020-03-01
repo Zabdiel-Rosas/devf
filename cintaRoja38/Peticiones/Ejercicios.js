@@ -145,4 +145,60 @@ const getNEO = (startDate, endDate, appKey) => {
     });
 }
 
-getNEO('2020-02-19', '2020-02-26', 'ykgPMfvMIs9i05tXnmtnPiZtyfW19ctjAx1ccIPt');
+// getNEO('2020-02-19', '2020-02-26', 'ykgPMfvMIs9i05tXnmtnPiZtyfW19ctjAx1ccIPt');
+
+
+const regalo = (calificacion) => {
+    return new Promise((resolve, reject)=>{
+        if(calificacion === 10){
+            resolve('Te ganaste un iPhone');
+        } else {
+            reject('Te quedas con tu nokia');
+        } 
+    })
+};
+
+// regalo(10)
+//     .then((tel) => {console.log(tel)})
+//     .catch((err)=> {console.log(err)})
+
+const axios = require("axios");
+
+function getMovimientos(id){
+    axios
+    .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+    .then((res) => {return res.data.abilities})
+    .then(abl => abl.forEach((a) => {console.log(a.ability.name)}))
+    .catch(err => console.log(err))
+}
+
+// getMovimientos(4);
+
+function getFilms(characterId){
+    axios
+        .get(`https://swapi.co/api/people/${characterId}/`)   
+        .then(res => {return res.data})
+        .then(data => data.forEach())
+        // .then(films => console.log(films))
+}
+
+// getFilms(14);
+
+function miPrimeraPromesa(numero){
+    return new Promise((resolve, reject)=>{
+        
+        if(numero > 5){
+            resolve('Si paso');
+        } else {
+            reject('No paso');
+        }
+    });
+}
+
+miPrimeraPromesa(7)
+    .then((respuesta) => {
+        console.log(respuesta);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
