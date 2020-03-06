@@ -77,10 +77,17 @@ app.get('/guitars', (req, res) => {
         })
 });
 
-// app.get('/guitars/:idGuitar', (req, res) => {
-//     const idGuitar = body.params.idGuitar;
-//     Guitar.findOne({})
-// });
+app.get('/guitars/:idGuitar', (req, res) => {
+    const idGuitar = req.params.idGuitar;
+    Guitar.findOne({_id: idGuitar}).exec()
+        .then((guitar) => {
+            if(guitar) res.send(guitar);
+            else res.status(404).send({mensaje: 'Guitarra no encontrada'});
+        })
+        .catch((err) => {
+            res.status(409).send(err);
+        });
+});
 
 app.post('/guitar', (req, res) => {
     console.log(req.body);
@@ -100,6 +107,30 @@ app.post('/guitar', (req, res) => {
     res.send(newGuitar);
 });
 
+app.patch('/guitars/:idGuitar', (req, res) => {
+    const idGuitar = req.params.idGuitar;
+
+    //Look Up and Update
+    Guitar.findOneAndUpdate({_id: idGuitar}, req.body, {new: true}).exec()
+        .then((guitarUpdated) => {
+            res.send(guitarUpdated);
+        })
+        .catch((err) => {
+            res.status(409).send(err);
+        });
+});
+
+app.delete('/guitar/:idGuitar', (req, res) => {
+    const idGuitar = req.params.idGuitar;
+
+    Guitar.findOneAndDelete({_id: idGuitar}).exec()
+        .then(() => {
+            res.send({mensaje: 'Se elimino el registro seleccionado'});
+        })
+        .catch((err) => {
+            res.status(409).send(err);
+        });
+});
 
 app.listen(3000, () => {
     console.log(`Server On`)
