@@ -137,15 +137,26 @@ const getNEO = (startDate, endDate, appKey) => {
         console.log(err);
         console.log(response.statusCode);
         const json = JSON.parse(body);
-        let neo = json.near_earth_objects;
+        const neo = json.near_earth_objects;
         const elementsPosition = Object.keys(neo);
-        
-       console.log(neo);
-        
+
+        for(let i = 0; i < elementsPosition.length; i++){
+            let dateArray = neo[elementsPosition[i]];
+
+            for(let j = 0; j < dateArray.length; j++){
+                let name = dateArray[j].name;
+                let isDangerous = dateArray[j].is_potentially_hazardous_asteroid;
+
+                if(isDangerous){
+                    console.log(name);                    
+                }
+                
+            }
+        }
     });
 }
 
-// getNEO('2020-02-19', '2020-02-26', 'ykgPMfvMIs9i05tXnmtnPiZtyfW19ctjAx1ccIPt');
+getNEO('2020-02-19', '2020-02-26', 'ykgPMfvMIs9i05tXnmtnPiZtyfW19ctjAx1ccIPt');
 
 
 const regalo = (calificacion) => {
@@ -195,10 +206,10 @@ function miPrimeraPromesa(numero){
     });
 }
 
-miPrimeraPromesa(7)
-    .then((respuesta) => {
-        console.log(respuesta);
-    })
-    .catch((error) => {
-        console.log(error);
-    })
+// miPrimeraPromesa(7)
+//     .then((respuesta) => {
+//         console.log(respuesta);
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     })
