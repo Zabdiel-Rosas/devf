@@ -1,0 +1,4 @@
+ npx create-react-app frontroppa
+
+* es el comando para crear una aplicacion con react
+* code . es para abrir vs code en la ubicación actual
